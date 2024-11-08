@@ -64,11 +64,6 @@ googleAnalytics = "" # DEPRECATED! Use .Services.googleAnalytics.ID
 [services.googleAnalytics]
   ID = "" # Enable Google Analytics by entering your tracking ID
 
-[Author] # Used in authorbox
-  name = "John Doe"
-  bio = "John Doe's true identity is unknown. Maybe he is a successful blogger or writer. Nobody knows it."
-  avatar = "img/avatar.png"
-
 [Params]
   description = "John Doe's Personal blog about everything" # Site description. Used in meta description
   copyright = "John Doe" # Footer copyright holder, otherwise will use site title
@@ -158,6 +153,22 @@ googleAnalytics = "" # DEPRECATED! Use .Services.googleAnalytics.ID
 
 For more information about all available standard configuration settings, please read
 [All Hugo Configuration Settings](https://gohugo.io/getting-started/configuration/#all-configuration-settings).
+
+### Authorbox
+
+Create a file at `data/authors/earnestfreeguy.json`. Add the following contents to it:
+
+```json
+{
+  "name": "Earnest Freeguy",
+  "avatar": "img/avatar-earnestfreeguy.png",
+  "bio": "Earnest cares a lot about Liberty. He likes to spend his time blogging, drinking fair-trade coffee, and eating his cats.",
+}
+```
+
+Then make sure to include "author: earnestfreeguy" in the Front Matter for a given post.
+The Authorbox will use `earnestfreeguy` to look up the data entry, then pull the
+various values for that author into the Authorbox.
 
 ### Front Matter example
 
