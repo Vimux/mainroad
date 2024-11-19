@@ -3,7 +3,9 @@
 		{{ partial "footer_links.html" . }}
 		<div class="footer__copyright">
 			&copy; {{ now.Format "2006" }} {{ .Site.Params.copyright | default .Site.Title }}.
+			{{ if .Site.Params.show_credits }}
 			<span class="footer__copyright-credits">{{ T "footer_credits" | safeHTML }}</span>
+			{{ end }}
 		</div>
 	</div>
 </footer>
